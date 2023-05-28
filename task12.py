@@ -10,3 +10,19 @@
 #   5 6 -> 2 3
 
 
+s = int(input('Введите сумму: '))
+p = int(input('Введите произведение: '))
+x = -1
+y = -1
+
+for i in range(1, s):
+    for j in range(1, s):
+        if s == i + j and p == i * j:
+            x = j
+            y = i
+
+if x > 1000 or y > 1000 or x == -1 or y == -1:
+    print('Введены неверные значения')
+
+else:
+    print(f'Ответ: {s} {p} -> {x} {y}')
